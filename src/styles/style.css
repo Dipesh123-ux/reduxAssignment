@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap');
+
+.main{
+    display:flex;
+    margin-top: 25vh;
+
+
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.user-button{
+    width:100px;
+    padding:10px;
+    border-radius: 6px;
+    background-color: #cf17c2;
+    background-image: linear-gradient(59deg, #cf17c2 0%, #2d06f2 100%);
+    box-shadow: 0 0 2px rgba(255,255,255);
+    border:none;
+    color:white;
+    font-weight: bold;
+
+}
+
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Utilities */
+.card::after,
+.card img {
+  border-radius: 50%;
+}
+.card {
+  display: flex;
+}
+
+.card {
+  padding: 2rem 2rem;
+  border-radius: 10px;
+  background : #101010;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+.card::before,
+.card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+.card::before {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #FFF;
+  border-radius: 10px;
+  top: -.7rem;
+  left: -.7rem;
+}
+.card::after {
+  height: 13rem;
+  width: 15rem;
+  background-color: #cf17c2;
+  background-image: linear-gradient(90deg, #cf17c2 0%, #2d06f2 100%);
+  top: -8rem;
+  right: -8rem;
+  box-shadow: 2rem 6rem 0 -3rem #FFF
+}
+
+.card img {
+  width: 8rem;
+  min-width: 80px;
+  box-shadow: 0 0 2px 5px #FFF;
+}
+
+.infos {
+ 
+  margin-left: 12rem;
+}
+
+.name {
+  margin-top: -3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px rgba(255, 255, 255);
+}
+.name h2 {
+  font-size: 1.3rem;
+}
+.name h4 {
+  font-size: .8rem;
+}
+
+.button-container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-left: 40px;
+   
+}
+
+@media (max-width:768px) {
+    .main{
+        flex-direction: column;
+    }
+    .button-container{
+        margin-top:20px;
+        flex-direction:row;
+        flex-wrap:wrap;
+        margin-left: 0;
+    }
+    .user-button{
+        margin : 10px;
+    }
+    .name{
+        margin-top: 1.5rem;
+    }
+    .infos{
+        margin-left:0.5rem;
+    }
+}
