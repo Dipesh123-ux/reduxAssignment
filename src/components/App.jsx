@@ -6,8 +6,8 @@ import '../styles/style.css'
 const App = () => {
   return (
     <>
-    <div style={{marginTop:"30px",color:"white",textShadow:"0 0 15px rgba(255,255,255)"}} className="text-center" >
-    <h2 className="" >User Profile - Using Redux</h2>
+    <div className="text-center text-white mt-5" >
+    <h1 className="" >User Profile - Using Redux</h1>
     </div>
 
   

@@ -18,7 +18,7 @@ const UserList = (props) => {
         }
         else{
         return props.users.map(user=>(
-            <button className="mt-2 user-button" onClick={()=>props.fetchUser(user.id)} >{user.id}</button>
+            <button className="mt-2 user-button glow-on-hover" onClick={()=>props.fetchUser(user.id)} >{user.id}</button>
         ))
         }
     }

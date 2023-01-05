@@ -13,16 +13,71 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .user-button{
-    width:100px;
-    padding:10px;
-    border-radius: 6px;
-    background-color: #cf17c2;
-    background-image: linear-gradient(59deg, #cf17c2 0%, #2d06f2 100%);
     box-shadow: 0 0 2px rgba(255,255,255);
-    border:none;
     color:white;
     font-weight: bold;
+    margin: 10px;
 
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #cf17c2, #2d06f2, #cf17c2, #cf17c2, #2d06f2 , #2d06f2 );
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+.glow-on-hover:active:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
 }
 
 
@@ -34,19 +89,19 @@ img {
 
 
 /* Utilities */
+
+
 .card::after,
 .card img {
   border-radius: 50%;
-}
-.card {
-  display: flex;
 }
 
 .card {
   padding: 2rem 2rem;
   border-radius: 10px;
   background : #101010;
-  max-width: 500px;
+  max-width: 70%;
+  height: 280px;
   box-shadow: 0 0 10px rgba(255, 255, 255, .3);
   position: relative;
   transform-style: preserve-3d;
@@ -83,8 +138,7 @@ img {
 }
 
 .infos {
- 
-  margin-left: 12rem;
+  margin-top: 4.5rem;
 }
 
 .name {
@@ -93,10 +147,10 @@ img {
   text-shadow: 0 0 5px rgba(255, 255, 255);
 }
 .name h2 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
 }
 .name h4 {
-  font-size: .8rem;
+  font-size: 1.2rem;
 }
 
 .button-container{
@@ -111,6 +165,9 @@ img {
     .main{
         flex-direction: column;
     }
+   .card{
+    max-width: 100%;
+   }
     .button-container{
         margin-top:20px;
         flex-direction:row;
@@ -125,5 +182,11 @@ img {
     }
     .infos{
         margin-left:0.5rem;
+    }
+    .glow-on-hover{
+      width: 150px;
+    }
+    .infos {
+      margin-top: 0rem;
     }
 }
